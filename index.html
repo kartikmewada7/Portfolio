@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Kartik Mewada | Software Developer & Cloud Architect (3D Portfolio)</title>
+  <meta name="description" content="Immersive 3D software engineering portfolio featuring 2 flagship distributed systems projects, 3 accredited cloud certificates (AWS, GCP, CNCF Kubernetes), interactive Three.js cyber core, and CLI terminal.">
+  <meta name="keywords" content="Software Developer, Full Stack, Cloud Architect, AWS, GCP, Kubernetes, Go, TypeScript, Rust, Three.js, 3D Portfolio">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient Cyber Glows & Grid Floor -->
+  <div class="cyber-grid-bg"></div>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Custom Neon Cyber Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ================= TOP NAVIGATION ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-badge">KM</span>
+        <span>Kartik.dev</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu" id="nav-links-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Controls: Audio, Theme Selector, Terminal Launcher -->
+      <div class="nav-controls">
+        <!-- Audio FX Toggle -->
+        <button id="btn-audio-toggle" class="icon-btn" title="Toggle Cyber Audio SFX" aria-label="Toggle Sound">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path class="wave" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path class="wave" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <!-- Theme Color Selector -->
+        <div class="theme-selector" title="Switch Color Theme">
+          <button class="theme-pill cyber active" data-theme-btn="cyber" title="Cyber Cyan"></button>
+          <button class="theme-pill synthwave" data-theme-btn="synthwave" title="Synthwave Pink"></button>
+          <button class="theme-pill matrix" data-theme-btn="matrix" title="Matrix Green"></button>
+          <button class="theme-pill gold" data-theme-btn="gold" title="Solar Gold"></button>
+        </div>
+
+        <!-- Terminal Quick Launcher -->
+        <button id="btn-terminal-toggle" class="icon-btn" title="Open Interactive Cyber CLI" aria-label="Open Terminal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <div class="hero-badge-pill">
+              <span class="status-pulse-dot"></span>
+              <span id="dev-status">Available for High-Scale Roles & Contract</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hello, I'm <br>
+              <span class="text-gradient" id="dev-name">Kartik Mewada</span>
+            </h1>
+
+            <h2 class="hero-subtitle" id="dev-title">
+              Software Developer & Cloud Architect
+            </h2>
+
+            <p class="hero-tagline" id="dev-tagline">
+              Engineering distributed cloud systems, real-time microservices, and immersive 3D digital experiences.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary btn-glow link-btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>Explore Projects</span>
+              </a>
+
+              <a href="#certificates" class="btn btn-secondary link-btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+                <span>3x Certifications</span>
+              </a>
+
+              <a href="#contact" class="btn btn-glass link-btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Get In Touch</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero 3D Viewport (Three.js Quantum Core) -->
+          <div class="hero-3d-wrapper" id="hero-3d-wrapper">
+            <canvas id="three-hero-canvas"></canvas>
+            
+            <div class="hero-3d-badge" id="hero-3d-badge">
+              3D Interactive Viewport
+            </div>
+
+            <!-- 3D Controls HUD Toolbar -->
+            <div class="hero-3d-hud">
+              <button class="hud-btn" id="btn-3d-inspect" title="Enter Orbit Inspection Mode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+                <span>Orbit 360°</span>
+              </button>
+
+              <button class="hud-btn active" id="btn-3d-rotate" title="Toggle Auto-Rotation">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                </svg>
+                <span>Spin</span>
+              </button>
+
+              <button class="hud-btn" id="btn-3d-wireframe" title="Toggle Wireframe Shader">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                </svg>
+                <span>Wireframe</span>
+              </button>
+
+              <button class="hud-btn" id="btn-3d-reset" title="Reset Camera Angle">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M3 12h3m12 0h3M12 3v3m0 12v3"></path>
+                </svg>
+                <span>Reset</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Animated Stats Counter Grid -->
+        <div class="hero-stats-grid" id="hero-stats-grid">
+          <!-- Populated dynamically from config.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 2 FEATURED PROJECTS SECTION ================= -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Portfolio Showcase</span>
+          <h2 class="section-title">Flagship Software Projects</h2>
+          <p class="section-desc">
+            Production-grade distributed architectures and high-performance developer infrastructure engineered for scale.
+          </p>
+        </div>
+
+        <!-- Projects Grid Container (Populated dynamically) -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 01 & 02 will be injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3 CERTIFICATES SECTION ================= -->
+    <section id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Verified Credentials</span>
+          <h2 class="section-title">Industry Certifications</h2>
+          <p class="section-desc">
+            3 recognized certifications validating cloud architecture, container orchestration, and microservices excellence.
+          </p>
+        </div>
+
+        <!-- Certificates Grid Container (Populated dynamically) -->
+        <div class="certificates-grid" id="certificates-grid">
+          <!-- 3 Certificates will be injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS MATRIX SECTION ================= -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Technical Arsenal</span>
+          <h2 class="section-title">Skills & Capabilities</h2>
+          <p class="section-desc">
+            Full-stack engineering stack spanning low-latency languages, modern 3D graphics, cloud infrastructure, and DevOps.
+          </p>
+        </div>
+
+        <div class="skills-matrix-grid" id="skills-matrix-grid">
+          <!-- Skill categories will be injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Info Column -->
+          <div class="contact-info-col">
+            <div>
+              <span class="section-tag">// Let's Connect</span>
+              <h2 class="contact-title">Initiate Transmission</h2>
+              <p class="contact-lead">
+                Have a challenging project, distributed system architecture, or full-time opportunity in mind? Let's build something phenomenal together.
+              </p>
+
+              <div class="contact-methods">
+                <a href="mailto:kartikmewada7@gmail.com" class="contact-method-item link-email">
+                  <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>kartikmewada7@gmail.com</span>
+                </a>
+
+                <div class="contact-method-item" id="btn-copy-email" style="cursor: pointer;" title="Click to copy email">
+                  <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy Email to Clipboard</span>
+                </div>
+
+                <a href="https://github.com/kartikmewada7" target="_blank" rel="noopener noreferrer" class="contact-method-item link-github">
+                  <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>github.com/kartikmewada7</span>
+                </a>
+
+                <a href="https://in.linkedin.com/in/kartik-mewada-6a8077331" target="_blank" rel="noopener noreferrer" class="contact-method-item link-linkedin">
+                  <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  <span>linkedin.com/in/kartik-mewada-6a8077331</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-text">
+              Location: <strong id="dev-location">Global / Remote</strong>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Full Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Linus Torvalds" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. linus@kernel.org" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message / Project Inquiries</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your technical goals, stack, or collaboration..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-glow">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span>Transmit Message</span>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= INTERACTIVE DOCKABLE TERMINAL ================= -->
+  <aside class="cyber-terminal" id="cyber-terminal">
+    <div class="terminal-header">
+      <div class="terminal-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="4 17 10 11 4 5"></polyline>
+          <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        <span>bash — kartik@dev-core: ~ (v2.4)</span>
+      </div>
+      <div class="terminal-controls">
+        <button class="term-btn" id="btn-terminal-minimize" title="Minimize">_</button>
+        <button class="term-btn" id="btn-terminal-close" title="Close">✕</button>
+      </div>
+    </div>
+    <div class="terminal-output" id="terminal-output"></div>
+    <div class="terminal-input-row">
+      <span class="prompt-symbol">❯</span>
+      <input type="text" class="terminal-input" id="terminal-input" placeholder="type 'help'..." autocomplete="off" spellcheck="false">
+    </div>
+  </aside>
+
+  <!-- Floating Dock Terminal Pill -->
+  <button class="terminal-dock-btn" id="btn-terminal-dock-open" onclick="if(window.cyberTerminalInstance) window.cyberTerminalInstance.toggleTerminal(true);" title="Open Developer Terminal">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="4 17 10 11 4 5"></polyline>
+      <line x1="12" y1="19" x2="20" y2="19"></line>
+    </svg>
+    <span>Terminal [CLI]</span>
+  </button>
+
+  <!-- ================= MODAL: PROJECT ARCHITECTURE SPECS ================= -->
+  <div class="modal-backdrop" id="modal-project">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-header-title" id="modal-prj-title">Project Architecture & Specs</h3>
+        <button class="modal-close-btn" data-modal-close aria-label="Close Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtitle" id="modal-prj-subtitle"></p>
+        <p class="modal-desc" id="modal-prj-desc"></p>
+
+        <div class="modal-metrics-grid" id="modal-prj-metrics"></div>
+
+        <h4 class="modal-section-title">Core Architectural Highlights</h4>
+        <ul class="modal-arch-list" id="modal-prj-arch"></ul>
+
+        <h4 class="modal-section-title">Technology Stack</h4>
+        <div class="project-tags" id="modal-prj-tags" style="margin-bottom: 0;"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary link-btn" id="modal-prj-github-link">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          <span>Source Code</span>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow link-btn" id="modal-prj-demo-link">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>Launch Live Demo</span>
+          <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: CERTIFICATE DIPLOMA VIEW ================= -->
+  <div class="modal-backdrop" id="modal-cert">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-header-title">Official Credential Diploma</h3>
+        <button class="modal-close-btn" data-modal-close aria-label="Close Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Digital Diploma Frame -->
+        <div class="diploma-frame">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--primary); margin-bottom: 8px;">
+            ACCREDITED CLOUD CREDENTIAL • VERIFIED
+          </div>
+          <h2 id="modal-cert-title" style="font-size: 1.5rem; margin-bottom: 6px; color: #fff;"></h2>
+          <div style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px;">
+            Issued by: <strong id="modal-cert-issuer" style="color: #fff;"></strong>
+          </div>
+          <p id="modal-cert-desc" style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6; max-width: 580px; margin-bottom: 20px;"></p>
+          
+          <div style="display: flex; gap: 24px; font-family: var(--font-mono); font-size: 0.8rem;">
+            <div>
+              <span style="color: var(--text-dim); display: block;">CREDENTIAL ID</span>
+              <span id="modal-cert-id" style="color: var(--primary); font-weight: bold;"></span>
+            </div>
+            <div>
+              <span style="color: var(--text-dim); display: block;">VALIDITY</span>
+              <span id="modal-cert-date" style="color: #fff;"></span>
+            </div>
+          </div>
+
+          <div class="diploma-seal">
+            OFFICIAL<br>VERIFIED<br>PASS
+          </div>
+        </div>
+
+        <h4 class="modal-section-title">Validated Competencies</h4>
+        <div class="cert-skills-wrap" id="modal-cert-skills"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal-close>Close</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow link-btn" id="modal-cert-verify-link">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Verify on Official Registry</span>
+          <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          Designed & Architected with Three.js & Modern Web Technologies © 2026 Kartik Mewada. All Rights Reserved.
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/kartikmewada7" target="_blank" rel="noopener noreferrer" class="icon-btn link-github" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://in.linkedin.com/in/kartik-mewada-6a8077331" target="_blank" rel="noopener noreferrer" class="icon-btn link-linkedin" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:kartikmewada7@gmail.com" class="icon-btn link-email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <!-- 1. Three.js Core & Controls (Loaded locally with CDN fallback) -->
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+
+  <!-- 2. Configuration Data (2 Projects, 3 Certificates, Developer Info) -->
+  <script src="js/config.js"></script>
+
+  <!-- 3. Futuristic Web Audio API Sound Synthesizer -->
+  <script src="js/sound.js"></script>
+
+  <!-- 4. 3D Card Tilt & Hologram Glare Engine -->
+  <script src="js/tilt.js"></script>
+
+  <!-- 5. 3D Three.js Cyber Core & Starfield Scene -->
+  <script src="js/three-scene.js"></script>
+
+  <!-- 6. Interactive Developer Cyber Terminal -->
+  <script src="js/terminal.js"></script>
+
+  <!-- 7. Application Controller, Modals, Theme & Cursor -->
+  <script src="js/app.js"></script>
+</body>
+</html>
+

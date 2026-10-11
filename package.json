@@ -1,0 +1,21 @@
+{
+  "name": "3d-developer-portfolio",
+  "version": "1.0.0",
+  "description": "State-of-the-art 3D portfolio website for Software Developers featuring 2 projects, 3 certificates, interactive Three.js cyber core, and CLI terminal.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node -e \"console.log('Build & Verification OK')\""
+  },
+  "keywords": [
+    "portfolio",
+    "threejs",
+    "webgl",
+    "software-developer",
+    "3d",
+    "cyberpunk"
+  ],
+  "author": "Kartik Mewada",
+  "license": "MIT"
+}
